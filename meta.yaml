@@ -1,0 +1,34 @@
+{% set name = "filemagic" %}
+{% set version = "1.6" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: e684359ef40820fe406f0ebc5bf8a78f89717bdb7fed688af68082d991d6dbf3
+
+build:
+  number: 0
+  script: "{{ PYTHON }} -m pip install . -vv"
+
+requirements:
+  host:
+    - pip
+    - python
+  run:
+    - python
+
+about:
+  home: "http://filemagic.readthedocs.org"
+  license: Apache Software
+  license_family: APACHE
+  license_file: 
+  summary: "A Python API for libmagic, the library behind the Unix file command"
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - your-github-id-here
