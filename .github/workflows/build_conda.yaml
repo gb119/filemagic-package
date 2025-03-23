@@ -28,7 +28,7 @@ jobs:
           auto-activate-base: false
           show-channel-urls: true
       - name: Build and upload the conda packages
-        uses: uibcdf/action-build-and-upload-conda-packages@2a98398b2f382f5ead0feebda695a13474e107f8
+        uses: uibcdf/action-build-and-upload-conda-packages@HEAD
         with:
           meta_yaml_dir: .
           overwrite: true
